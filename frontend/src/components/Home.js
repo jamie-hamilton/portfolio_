@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import Typer from '../transitions/Typer';
 import Jumbotron from 'react-bootstrap/Jumbotron';
-import Sections from './sections';
+import Sections from './Sections';
 
 class Home extends Component {
     constructor(props) {
