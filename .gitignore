@@ -140,5 +140,6 @@ sk.txt
 # ignore node_modules (obvz)
 node_modules
 
-# Output of collectstatic
+# Output of collectstatic & media files
 staticfiles/*
+project_images/*

@@ -7,7 +7,8 @@ module.exports = {
   output: {
     path: path.resolve(__dirname, "frontend/static/frontend"),
     publicPath: "./frontend/static/frontend",
-    filename: "main.js",
+    filename: "[name].js",
+    chunkFilename: "[id]-[chunkhash].js",
   },
   devServer: {
     writeToDisk: true,

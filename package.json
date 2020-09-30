@@ -5,10 +5,14 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
+    "heroku-prebuild": "NODE_ENV=production npm install && npm build",
     "dev": "webpack --mode development ./frontend/src/index.js --output ./frontend/static/frontend/main.js",
     "start:dev": "webpack-dev-server --config webpack.config.js",
     "build": "webpack --mode production ./src/index.js --output ./static/frontend/main.js"
   },
+  "cacheDirectories": [
+    "./node_modules"
+  ],
   "keywords": [],
   "author": "jimthethief",
   "license": "ISC",
