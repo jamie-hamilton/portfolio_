@@ -49,6 +49,7 @@ $custom-colors: (
   "sass": #c6538c,
   "javascript": #f1e05a,
   "python": #3572A5,
+  "ruby": #701516,
   "mail_": rgb(61, 201, 147),
   "network_": rgba(152, 255, 138, 0.5),
   "portfolio_": rgb(230, 230, 250),
@@ -95,6 +96,10 @@ h4, h5, h6 {
   @extend %headings;
 }
 
+h1 {
+  font-size: 2rem;
+}
+
 body {
   font-family: $font-primary;
 }
@@ -138,14 +143,50 @@ i {
   padding: 1.5rem 15px; // add padding to columns when stacked
 }
 
-.accordion {
-  width: 75%;
-}
-
 .cursor {
   border-left: .1em solid #212529;
   opacity: 0.8;
   animation: blink 1s steps(1) infinite; // flashing cursor for Typer components
+}
+
+.small {
+  font-size: 90%;
+}
+
+@media (min-width: 992px) { 
+  .accordion {
+    width: 75%;
+  }
+  h1 {
+    font-size: 2.5rem;
+  }
+  code {
+    font-size: 1.5rem;
+  }
+  .foot-copy > code {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 991px) {
+  .foot-copy > code {
+    font-size: 0.8rem;
+  }
+}
+
+@media (max-width: 575px) {
+  h1 {
+    font-size: 1.75rem;
+  }
+  h2 {
+    font-size: 1.5rem;
+  }
+  h3 {
+    font-size: 1.25rem;
+  }
+  .foot-copy > code {
+    font-size: 0.6rem;
+  }
 }
 
 // F A D E  I N //
@@ -371,7 +412,7 @@ i {
 }
 
 .project-row {
-  padding: 4rem;
+  padding: 4rem 15px;
   margin-left: 0;
   margin-right: 0;
 }
@@ -408,7 +449,9 @@ i {
   .hobby-text,
   .hobby-bot {
     color: #212529;
-    font-size: small;
+  }
+  .hobby-bot {
+    font-size: inherit;
   }
 }
 
@@ -449,10 +492,6 @@ i {
       padding: 0.5rem;
     }
   }
-}
-
-.foot-copy > code {
-  font-size: small;
 }
 
 @keyframes blink {

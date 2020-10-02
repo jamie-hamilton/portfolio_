@@ -61,7 +61,7 @@ class Typer extends React.Component {
     render() {    
       return (
         <span>{ this.props.startText }&nbsp;
-          <span>{ this.state.text }</span>
+          <span style={{wordWrap: "break-word"}}>{ this.state.text }</span>
           <span className="cursor"></span>
         </span>
       );

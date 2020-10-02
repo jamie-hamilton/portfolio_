@@ -1,7 +1,7 @@
 import React from 'react';
 import { Route, Switch } from 'react-router-dom';
-import Home from './components/Home';
-import ProjectList from './components/Projects';
+import Home from './components/Home/Home';
+import ProjectList from './components/Projects/Projects';
 
 
 const BaseRouter = () => (
