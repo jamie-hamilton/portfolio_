@@ -144,6 +144,10 @@ if not DEBUG:
         )
     }
 
+    # Force secure connection in production
+    SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
+    SECURE_SSL_REDIRECT = True
+
     # Production media settings
     AWS_STORAGE_BUCKET_NAME = os.environ['AWS_STORAGE_BUCKET_NAME']
     AWS_ACCESS_KEY_ID = os.environ.get('AWS_ACCESS_KEY')

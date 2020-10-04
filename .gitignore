@@ -142,4 +142,4 @@ node_modules
 
 # Output of collectstatic & media files
 staticfiles/*
-project_images/*
+api/media/*

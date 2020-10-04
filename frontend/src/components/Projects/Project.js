@@ -1,5 +1,6 @@
 import React from 'react';
-import { Row, Col, Accordion, Card, Image } from 'react-bootstrap';
+import { Row, Col, Accordion, Card } from 'react-bootstrap';
+import ProjectImage from './ProjectImage';
 import ProjectLinks from './ProjectLinks';
 import ProjectIcons from './ProjectIcons';
 import ProjectPercent from './ProjectPercent';
@@ -19,11 +20,7 @@ class Project extends React.Component {
                     ? {span: 6, order: 'last'}
                     : {span: 6, order: 'first'}
                 } className="stack-col">
-                    <div className="img-container mx-auto">
-                    <div className="img-overlay"></div>
-                    <code className="large img-overlay-title">{this.props.project.title}</code>
-                    <Image className="project-image" src={this.props.project.media[0].project_image} fluid />
-                    </div>
+                    <ProjectImage title={this.props.project.title} placeholder={`/static/placeholders/${this.props.project.title}.svg`} image={this.props.project.media[0].project_image}/>
                     {this.props.project.hobby_server && 
                             (<Row className="hobby text-center justify-content-center">
                                 <code className="hobby-text small"><i className="hobby-bot fas fa-robot"></i>
