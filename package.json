@@ -28,6 +28,7 @@
     "bootstrap": "^4.5.2",
     "bootstrap-sass": "^3.4.1",
     "brotli-webpack-plugin": "^1.1.0",
+    "clean-webpack-plugin": "^3.0.0",
     "css-loader": "^4.3.0",
     "postcss": "^8.0.7",
     "postcss-cli": "^8.0.0",
