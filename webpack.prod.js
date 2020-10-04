@@ -7,7 +7,10 @@ module.exports = merge(common, {
    mode: 'production',
    devtool: '',
    plugins: [
-      new MiniCssExtractPlugin(),
+      new MiniCssExtractPlugin({
+        filename: '[name].css',
+        chunkFilename: '[id].css'
+      }),
 		new BrotliPlugin({
 			asset: '[path].br[query]',
 			test: /\.(js|css|html|svg)$/,
