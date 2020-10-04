@@ -1,5 +1,8 @@
 import React from 'react';
-import { Row, Col, Accordion, Card } from 'react-bootstrap';
+import Row from 'react-bootstrap/Row';
+import Col from 'react-bootstrap/Col';
+import Accordion from 'react-bootstrap/Accordion';
+import Card from 'react-bootstrap/Card';
 import ProjectImage from './ProjectImage';
 import ProjectLinks from './ProjectLinks';
 import ProjectIcons from './ProjectIcons';

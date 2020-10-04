@@ -1,6 +1,7 @@
 import React from 'react';
-import { Row, Col, Badge } from 'react-bootstrap';
-
+import Row from 'react-bootstrap/Row';
+import Col from 'react-bootstrap/Col';
+import Badge from 'react-bootstrap/Badge';
 
 class ProjectPercent extends React.Component {
     render() {

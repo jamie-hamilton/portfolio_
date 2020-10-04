@@ -1,5 +1,6 @@
 import React from 'react';
-import { Container, Row } from 'react-bootstrap';
+import Row from 'react-bootstrap/Row';
+import Container from 'react-bootstrap/Container';
 
 class Intro extends React.Component {
     render() {
