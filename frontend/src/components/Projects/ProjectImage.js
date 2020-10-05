@@ -15,25 +15,26 @@ class  ProjectImage extends React.Component {
         this.setState(() => {
             return {
                 imgReady: true,
-                imgClass: "fade-in-fast project-image" 
+                imgClass: "fade-in-slow project-image" 
             };
         });
     }
     render() {
         return (
             <div className="img-container mx-auto">
+                <svg viewBox="0 0 800 500" preserveAspectRatio="xMidYMin slice"
+                style={{width: "100%", height: "auto", position: "absolute"}}></svg>
                 <div className="img-overlay"></div>
                 <code className="large img-overlay-title">{this.props.title}</code>
                 <Image 
-                    className="project-image" 
+                    className="project-image placeholder" 
                     src={this.props.placeholder} 
-                    style={{display: this.state.imgReady ? "none" : "block"}}
                     fluid 
                 />
                 <Image 
                     className={this.state.imgClass}
                     src={this.props.image} 
-                    style={{display: this.state.imgReady ? "block" : "none"}}
+                    style={{opacity: this.state.imgReady ? "block" : "none"}}
                     onLoad={this.handleLoad}
                     fluid 
                 />
