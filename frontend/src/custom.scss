@@ -556,6 +556,17 @@ i {
   }
 }
 
+.nav-text {
+  font-family: $font-code;
+  font-size: small;
+  margin: 0;
+  padding: 0;
+  -webkit-transition: opacity 0.5s ease-in-out;
+  -moz-transition: opacity 0.5s ease-in-out;
+  -o-transition: opacity 0.5s ease-in-out;
+  transition: opacity 0.5s ease-in-out;
+}
+
 .foot-copy > code {
   font-size: 0.8rem;
 }

@@ -41,11 +41,13 @@ class Navigation extends React.Component {
                 </Container>
                 </Navbar.Brand>
                 <Nav className="nav-icons justify-content-end my-auto">
-                    <Nav.Link className="sq-link my-auto" as={NavLink} exact to="/" replace>
+                    <Nav.Link className="sq-link my-auto text-center" as={NavLink} exact to="/" replace>
                         <i className={`fas fa-home ${this.state.offTop ? "sq-icon-dark" : "sq-icon-light"}`}></i>
+                        <p className="nav-text" style={this.state.offTop ? {opacity: 0} : {opacity: 1}}>home_</p>
                     </Nav.Link>
-                    <Nav.Link className="sq-link my-auto" as={NavLink} to="/projects" replace>
+                    <Nav.Link className="sq-link my-auto text-center" as={NavLink} to="/projects" replace>
                         <i className={`fas fa-laptop-code ${this.state.offTop ? "sq-icon-dark" : "sq-icon-light"}`}></i>
+                        <p className="nav-text" style={this.state.offTop ? {opacity: 0} : {opacity: 1}}>work_</p>
                     </Nav.Link>
                 </Nav>
             </Navbar>

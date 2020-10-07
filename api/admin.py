@@ -81,5 +81,6 @@ class SectionAdmin(admin.ModelAdmin):
 
 admin.site.register(Subject)
 admin.site.register(Category)
+admin.site.register(ProjectMedia)
 admin.site.register(Section, SectionAdmin)
 admin.site.register(Project, ProjectAdmin)

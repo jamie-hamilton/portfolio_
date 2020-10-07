@@ -5,6 +5,11 @@ from django.urls import reverse
 # Create your models here.
 class Subject(models.Model):
     """Programming Subject, Language or Framework"""
+    priority = models.IntegerField(
+        help_text='Lower numbers appear more prominently.',
+        blank=True,
+        null=True,
+    )
     name = models.CharField(
         unique=True,
         max_length=50,
@@ -23,7 +28,7 @@ class Subject(models.Model):
         blank=True,
     )
     class Meta:
-        ordering = ['name']
+        ordering = ['priority', 'name']
 
     def __str__(self):
         """Subject object string."""
@@ -145,7 +150,7 @@ class Section(models.Model):
     title = models.CharField(max_length=200)
     summary = models.TextField(
         max_length=1000,
-        help_text='Enter a brief \'about me\' intro.'
+        help_text='Enter a brief intro to the section.'
     )
 
 
