@@ -9,7 +9,7 @@ class ToProject extends React.Component {
                 <Link className="feature-btn" as={Link} to="/projects" replace>
                 <div className="fill"></div>
                 <div className="btn-text">
-                projects_<code>&gt;</code><span className="text-right"><i className="small fas fa-laptop-code"></i></span>
+                projects_<code>&gt;</code><span><i className="fas fa-laptop-code"></i></span>
                 </div>
                 </Link>
             </Row>
