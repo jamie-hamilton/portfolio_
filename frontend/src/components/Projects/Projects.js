@@ -25,7 +25,7 @@ class ProjectList extends React.Component {
                     placeholder: <Loader className="fade-in" type="Watch" color="#e83e8c" height={80} width={80} />
                 };
             });
-        }, 1000)
+        }, 500)
         fetch("api/projects")
             .then(response => {
             if (response.status > 400) {

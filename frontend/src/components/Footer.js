@@ -55,7 +55,7 @@ class Foot extends React.Component {
                     : "fixed-bottom slide-down")
                 }
             >
-                <Navbar variant="dark" bg="dark">
+                <Navbar variant="dark">
                     <Navbar.Brand>
                     <Container className="foot-copy w-25 ml-0 mr-0">
                         <code>jamie_hamilton_2020<span className="blink">|</span></code>
@@ -65,7 +65,7 @@ class Foot extends React.Component {
                         <a href="https://github.com/jimthethief" target="_blank" className="sq-link my-auto nav-link">
                             <i className="fab fa-github sq-icon-light"></i>
                         </a>
-                        <a href="mailto:jhamilton.contact@gmail.com" target="_blank" className="sq-link my-auto nav-link">
+                        <a href="mailto:hi@jamiehamilton.dev" target="_blank" className="sq-link my-auto nav-link">
                             <i className="fas fa-at sq-icon-light"></i>
                         </a>
                     </Nav>

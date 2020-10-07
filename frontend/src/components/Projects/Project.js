@@ -23,7 +23,8 @@ class Project extends React.Component {
                     ? {span: 6, order: 'last'}
                     : {span: 6, order: 'first'}
                 } className="stack-col">
-                    <ProjectImage title={this.props.project.title} placeholder={`/static/placeholders/${this.props.project.title}.svg`} image={this.props.project.media[0].project_image}/>
+                    <ProjectImage title={this.props.project.title} placeholder={this.props.project.media.project_placeholder} image={this.props.project.media.project_image}/>
+                    
                     {this.props.project.hobby_server && 
                             (<Row className="hobby text-center justify-content-center">
                                 <code className="hobby-text small"><i className="hobby-bot fas fa-robot"></i>
@@ -40,7 +41,7 @@ class Project extends React.Component {
                     ? {span: 6, order: 'first'}
                     : {span: 6, order: 'last'}
                 } className="my-auto stack-col">
-                    <Accordion className="mx-auto text-center">
+                    <Accordion className="mx-auto text-center" defaultActiveKey="0">
                     <div className="project-cards">
                         <Card>
                             <Accordion.Toggle className={`${this.props.project.title} rounded-0`} as={Card.Header} eventKey="0">

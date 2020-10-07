@@ -21,16 +21,6 @@ class ProjectLanguageInline(admin.StackedInline):
             return extra - 1
         return extra
 
-class ProjectMediaInline(admin.StackedInline):
-    """Display project media inline"""
-    model = ProjectMedia
-    # Override get_extra method
-    def get_extra(self, request, obj=None, **kwargs):
-        extra = 1
-        if obj:
-            return extra - 1
-        return extra
-
 
 class LinkInline(admin.StackedInline):
     """Display project links inline"""
@@ -42,6 +32,15 @@ class LinkInline(admin.StackedInline):
             return extra - 1
         return extra
 
+class ProjectMediaInline(admin.TabularInline):
+    """Display project links inline"""
+    model = ProjectMedia
+    # Override get_extra method
+    def get_extra(self, request, obj=None, **kwargs):
+        extra = 1
+        if obj:
+            return extra - 1
+        return extra
 
 class ProjectAdmin(admin.ModelAdmin):
     """Project custom admin"""
@@ -50,12 +49,12 @@ class ProjectAdmin(admin.ModelAdmin):
         'priority',
         'title',
         'summary',
-        'hobby_server'
+        'hobby_server',
     ]
     inlines = [
+        ProjectMediaInline,
         ProjectLanguageInline,
         LinkInline,
-        ProjectMediaInline,
     ]
 
 class CategoryInline(admin.StackedInline):
@@ -80,8 +79,7 @@ class SectionAdmin(admin.ModelAdmin):
         CategoryInline
     ]
 
-
-admin.site.register(Project, ProjectAdmin)
 admin.site.register(Subject)
 admin.site.register(Category)
 admin.site.register(Section, SectionAdmin)
+admin.site.register(Project, ProjectAdmin)

@@ -97,19 +97,21 @@ class ProjectLanguage(models.Model):
 
 class ProjectMedia(models.Model):
     """Model for project photos"""
-    project = models.ForeignKey(
+    media = models.OneToOneField(
         Project,
         related_name="media",
+        null=True,
+        blank=True,
         on_delete=models.CASCADE,
+    )
+    project_placeholder = models.FileField(
+        upload_to='project_placeholders',
+        blank=True
     )
     project_image = models.ImageField(
         upload_to='project_images',
         blank = True
     )
-
-    def __str__(self):
-        """Project media object string."""
-        return f'{self.project.title} media.'
 
 
 class Link(models.Model):

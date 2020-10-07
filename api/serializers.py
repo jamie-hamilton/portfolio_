@@ -35,6 +35,7 @@ class ProjectMediaSerializer(serializers.ModelSerializer):
         model = ProjectMedia
         fields = [
             'id',
+            'project_placeholder',
             'project_image',
         ]
 
@@ -52,7 +53,7 @@ class LinkSerializer(serializers.ModelSerializer):
 class ProjectSerializer(serializers.ModelSerializer):
     """Serialize Project model"""
     languages = ProjectLanguageSerializer(many=True, read_only=True)
-    media =  ProjectMediaSerializer(many=True, read_only=True)
+    media =  ProjectMediaSerializer(read_only=True)
     links = LinkSerializer(many=True, read_only=True)
     class Meta:
         model = Project

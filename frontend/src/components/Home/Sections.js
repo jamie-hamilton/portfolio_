@@ -5,7 +5,7 @@ import ResponseError from '../ResponseError';
 import Fadein from '../../transitions/Fadein';
 import Section from './Section';
 import Contact from '../Contact';
-
+import ToProject from './ToProject';
 
 class Sections extends React.Component {
     constructor(props) {
@@ -24,7 +24,7 @@ class Sections extends React.Component {
                     placeholder: <Loader className="fade-in" type="Watch" color="#e83e8c" height={80} width={80} />
                 };
             });
-        }, 1000)
+        }, 500)
         fetch("api/sections")
             .then(response => {
             if (response.status > 400) {
@@ -66,6 +66,7 @@ class Sections extends React.Component {
                     );
                 })}
                 </Jumbotron>
+                <ToProject />
                 <Contact />
             </Fadein>
             }
