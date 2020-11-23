@@ -62,7 +62,7 @@ class Foot extends React.Component {
                     </Container>
                     </Navbar.Brand>
                     <Nav className="nav-icons justify-content-end">
-                        <a href="https://github.com/jimthethief" target="_blank" className="sq-link my-auto nav-link">
+                        <a href="https://github.com/jamie-hamilton" target="_blank" className="sq-link my-auto nav-link">
                             <i className="fab fa-github sq-icon-light"></i>
                         </a>
                         <a href="mailto:hi@jamiehamilton.dev" target="_blank" className="sq-link my-auto nav-link">
