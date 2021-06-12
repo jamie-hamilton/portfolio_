@@ -47,6 +47,7 @@
     "zlib": "^1.0.5"
   },
   "dependencies": {
+    "glob-parent": ">=5.1.2",
     "precss": "^3.1.2",
     "react-loader-spinner": "^3.1.14",
     "urix": "^0.1.0"
