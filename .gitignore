@@ -143,3 +143,4 @@ node_modules
 # Output of collectstatic & media files
 staticfiles/*
 api/media/*
+frontend/static/frontend/*

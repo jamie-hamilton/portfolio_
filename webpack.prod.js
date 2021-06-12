@@ -5,7 +5,6 @@ const BrotliPlugin = require('brotli-webpack-plugin');
 
 module.exports = merge(common, {
    mode: 'production',
-   devtool: '',
    plugins: [
 		new webpack.DefinePlugin({
 			PRODUCTION: JSON.stringify(true),
