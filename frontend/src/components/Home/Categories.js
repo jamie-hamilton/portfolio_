@@ -10,7 +10,7 @@ class Categories extends React.Component {
             <Row>
             {this.props.categories.map(category => {
                 return (
-                    <Col className="stack-col" key={category.id} md={4}>
+                    <Col className="stack-col" key={category.id} lg={4}>
                         <Card style={{minHeight: "10rem"}} bg="dark" text="light" className="category-card text-center">
                             <Card.Body>
                                 <Card.Header>
