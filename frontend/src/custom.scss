@@ -55,7 +55,11 @@ $custom-colors: (
   "portfolio_": rgb(230, 230, 250),
   "auction_": rgba(23, 162, 184, 0.9),
   "library_": rgb(255, 255, 255),
-  "music_": rgb(140, 96, 193),
+  "music_": rgb(225, 106, 161),
+  "tve_": rgb(75, 138, 155),
+  "wedding_": rgb(239, 196, 88),
+  "conveyancing_": rgb(100, 109, 130),
+  "mozaique_": rgb(237, 108, 46)
 ) !default;
 
 @each $color, $value in $custom-colors {
