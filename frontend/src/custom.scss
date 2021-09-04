@@ -429,6 +429,7 @@ i {
 .img-container {
 	position: relative;
   width: 100%;
+  max-width: 1000px;
 }
 
 .project-image {
@@ -469,7 +470,8 @@ i {
 }
 
 .img-overlay-title {
-  top: 40%;
+  top: 50%;
+  transform: translateY(-50%);
 }
 
 .img-container:hover .img-overlay,
@@ -615,6 +617,18 @@ i {
   }
   code {
     font-size: 0.9rem;
+  }
+  .img-overlay-title {
+    font-size: 1.75rem;
+  }
+  .nav-icons {
+    &-footer {
+      .sq-icon-light {
+        border-width: 2px;
+        font-size: 1rem;
+        padding: 0.25rem;
+      }
+    }
   }
   .foot-copy > code {
     font-size: 0.6rem;

@@ -57,13 +57,16 @@ class Foot extends React.Component {
             >
                 <Navbar variant="dark">
                     <Navbar.Brand>
-                    <Container className="foot-copy w-25 ml-0 mr-0">
-                        <code>jamie_hamilton_2020<span className="blink">|</span></code>
-                    </Container>
+                    <div className="foot-copy ml-0 mr-0">
+                        <code>jamie_hamilton_{new Date().getFullYear()}<span className="blink">|</span></code>
+                    </div>
                     </Navbar.Brand>
-                    <Nav className="nav-icons justify-content-end">
+                    <Nav className="nav-icons nav-icons-footer justify-content-end">
                         <a href="https://github.com/jamie-hamilton" target="_blank" className="sq-link my-auto nav-link">
                             <i className="fab fa-github sq-icon-light"></i>
+                        </a>
+                        <a href="https://www.linkedin.com/in/jamie-hamilton-6ba907144/" target="_blank" className="sq-link my-auto nav-link">
+                            <i className="fab fa-linkedin sq-icon-light"></i>
                         </a>
                         <a href="mailto:hi@jamiehamilton.dev" target="_blank" className="sq-link my-auto nav-link">
                             <i className="fas fa-at sq-icon-light"></i>

@@ -22,7 +22,7 @@ class Project extends React.Component {
                     this.props.project.priority % 2 == 0
                     ? {span: 6, order: 'last'}
                     : {span: 6, order: 'first'}
-                } className="stack-col">
+                } className="stack-col my-auto">
                     <ProjectImage title={this.props.project.title} placeholder={this.props.project.media.project_placeholder} image={this.props.project.media.project_image}/>
                     
                     {this.props.project.hobby_server && 
